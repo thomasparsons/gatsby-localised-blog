@@ -1,0 +1,22 @@
+{
+  "name": "my-localised-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "my-localised-blog",
+  "author": "Tom Parsons",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
