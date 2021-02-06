@@ -1,0 +1,18 @@
+[
+  {
+    "locale": "en",
+    "content": {
+      "en": "hello world",
+      "nl": null
+    },
+    "slug": "my-english-slug"
+  },
+  {
+    "locale": "nl",
+    "content": {
+      "en": null,
+      "nl": "hello world"
+    },
+    "slug": "my-dutch-slug"
+  }
+]
