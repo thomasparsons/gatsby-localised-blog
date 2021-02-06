@@ -1,4 +1,25 @@
 import * as React from "react";
+// import articles from "../articles.json";
+import getPageRoute from "../getPageRoute";
+
+const articles = [
+  {
+    locale: "en",
+    content: {
+      en: "hello world",
+      nl: null,
+    },
+    slug: "my-english-slug",
+  },
+  {
+    locale: "nl",
+    content: {
+      en: null,
+      nl: "hello world",
+    },
+    slug: "my-dutch-slug",
+  },
+];
 
 // styles
 const pageStyles = {
@@ -11,19 +32,7 @@ const headingStyles = {
   marginBottom: 64,
   maxWidth: 320,
 };
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
+
 const listStyles = {
   marginBottom: 96,
   paddingLeft: 0,
@@ -41,26 +50,6 @@ const linkStyle = {
   verticalAlign: "5%",
 };
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-};
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: "14px",
-};
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-};
-// data
-import articles from "../articles.json";
-import getPageRoute from "../getPageRoute";
-
 // markup
 const IndexPage = () => {
   return (
@@ -75,7 +64,7 @@ const IndexPage = () => {
       </h1>
       <ul style={listStyles}>
         {articles.map((article) => (
-          <li style={{ ...listItemStyles, color: link.color }}>
+          <li style={{ ...listItemStyles }}>
             <span>
               <a
                 style={linkStyle}

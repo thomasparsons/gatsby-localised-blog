@@ -21,10 +21,11 @@ const getPageRoute = (routePath, locale, params) => {
 
   // for production code, this may be much more complicated, and would need appropriate logic
   const paths = routePath.split(".");
-  const route = localisedRoutes[paths[0].paths[1]];
+
+  let route = localisedRoutes[paths[0]][paths[1]];
 
   if (params.slug) {
-    route.replace("{params.slug}", params.slug);
+    route = route.replace("{params.slug}", params.slug);
   }
 
   return `/${locale}/${route}`;

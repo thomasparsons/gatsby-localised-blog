@@ -1,6 +1,25 @@
 import React from "react";
 
-import articles from "./articles.json";
+// import articles from "./articles.json";
+
+const articles = [
+  {
+    locale: "en",
+    content: {
+      en: "hello world",
+      nl: null,
+    },
+    slug: "my-english-slug",
+  },
+  {
+    locale: "nl",
+    content: {
+      en: null,
+      nl: "hello world",
+    },
+    slug: "my-dutch-slug",
+  },
+];
 
 const BlogArticle = ({ pageContext }) => {
   const article = articles.find((article) => article.slug === pageContext.slug);
@@ -13,4 +32,4 @@ const BlogArticle = ({ pageContext }) => {
   );
 };
 
-module.exports = BlogArticle;
+export default BlogArticle;
